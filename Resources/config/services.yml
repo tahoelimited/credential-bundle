@@ -1,0 +1,22 @@
+services:
+
+    credential_storage:
+        class: Tahoe\CredentialBundle\Service\CredentialStorage
+        arguments:
+            - @doctrine.orm.entity_manager
+            - @credential_repository
+            - @credential_factory
+            - @token_generator
+
+    credential_factory:
+        class: Tahoe\CredentialBundle\Factory\CredentialFactory
+
+    credential_repository:
+        class: Doctrine\ORM\EntityRepository
+        factory_service: doctrine.orm.entity_manager
+        factory_method: getRepository
+        arguments:
+            - Tahoe\CredentialBundle\Entity\Credential
+
+    token_generator:
+        class: Tahoe\CredentialBundle\Service\TokenGenerator

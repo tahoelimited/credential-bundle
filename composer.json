@@ -1,0 +1,30 @@
+{
+    "name": "tahoelimited/credential-bundle",
+    "type": "symfony-bundle",
+    "description": "A bundle to handle user's crendentials",
+    "keywords": ["credentials", "symfony", "ftp"],
+    "homepage": "https://github.com/tahoelimited/credential-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Steve Gill",
+            "email": "steve.gill@tahoelimited.com"
+        },
+        {
+            "name": "Konrad Podgorski",
+            "email": "konrad.podgorski@gmail.com"
+        },
+        {
+            "name": "Pablo Martelletti",
+            "email": "pmartelletti@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.5",
+        "symfony/framework-bundle": "~2.3"
+    },
+    "autoload": {
+        "psr-4": { "Tahoe\\CredentialBundle\\": "" }
+    }
+}
